@@ -1,8 +1,10 @@
 import mysql from 'mysql2/promise';
+import 'dotenv/config';
+
 export const connection = await mysql.createConnection({
-  host: '172.16.101.146',
-  user: 'camper',
-  database: 'trainer',
-  port: 3306,
-  password: 'campus2023'
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT,
+  password: process.env.DB_PASS
 });

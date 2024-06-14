@@ -1,0 +1,5 @@
+DB_HOST="host"
+DB_USER="root"
+DB_NAME="dbName"
+DB_PORT=11111
+DB_PASS="password"
