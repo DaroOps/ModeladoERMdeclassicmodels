@@ -1,11 +1,13 @@
-import { connection } from "../../helpers/conexion.js";
+import { connection } from '../../helpers/conexion.js';
 
-export const getAllLastNameASC = async()=>{
-    const [result] = await connection.query(`SELECT contactLastname, contactFirstname FROM customers ORDER BY contactLastname`);
-    return result;
-}
+// Consulta 3: Detalles de un cliente específico
+export const getCustomerDetails = async (customerNumber) => {
+  const [rows] = await connection.query('SELECT * FROM customers WHERE customerNumber = ?', [customerNumber]);
+  return rows;
+};
 
-export const getAllLastNameDESC = async()=>{
-    const [result] = await connection.query(`SELECT contactLastname, contactFirstname FROM customers ORDER BY contactLastname DESC`);
-    return result;
-}
+// Consulta 9: Listar todos los clientes en una ciudad específica
+export const getCustomersByCity = async (city) => {
+  const [rows] = await connection.query('SELECT * FROM customers WHERE city = ?', [city]);
+  return rows;
+};

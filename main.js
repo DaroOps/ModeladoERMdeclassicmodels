@@ -1,15 +1,8 @@
-import { 
-    getAllLastNameASC, 
-    getAllLastNameDESC
-} from "./js/module/customers.js";
+import { getAllProductsInStock, getProductsAbovePrice, getTotalProductsInStock } from './js/module/products.js';
+// import { getEmployeesByOffice, getEmployeesWithManager } from './helpers/employeesQueries.js';
+// import { getCustomerDetails, getCustomersByCity } from './helpers/customersQueries.js';
+// import { getPaymentsByCustomer } from './helpers/paymentsQueries.js';
+// import { getAllShippedOrders } from './helpers/ordersQueries.js';
+// import { getOfficesByCountry } from './helpers/officesQueries.js';
 
-
-
-import { getAll, 
-    getAllLastName, 
-    getAllFullNameJob, 
-    getAllJobTitle 
-} from "./js/module/employees.js";
-
-
-console.log(await getAllLastNameDESC());
+console.log(await getAllProductsInStock());
